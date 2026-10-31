@@ -8,7 +8,7 @@ I like to sketch and doodle a lot but I only have notebook paper to draw on. Whe
 
 ## How It Works
 
-The MVP should have the ability to intake an image file, replace the color of the margin and rule lines, and then output an image without those lines. Later on, I hope to be able to include features that will match the edited colors to the 'background' white color of the page.
+The MVP should have the ability to intake an image file, turn each pixel into a massive 2D array filled with the RGB codes of each pixel. Then, the RGB codes coinciding with the colors of the ruled and margin lines will be replaced with that of the base color of the page. Then it will output an image without those lines.
 ![System diagram](MarginEditorFlowChart.pdf)
 
 ## Tech Stack
