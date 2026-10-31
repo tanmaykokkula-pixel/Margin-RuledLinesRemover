@@ -9,7 +9,7 @@ I like to sketch and doodle a lot but I only have notebook paper to draw on. Whe
 ## How It Works
 
 The MVP should have the ability to intake an image file, replace the color of the margin and rule lines, and then output an image without those lines. Later on, I hope to be able to include features that will match the edited colors to the 'background' white color of the page.
-![System diagram](EDIT THIS)
+![System diagram](MarginEditorFlowChart.pdf)
 
 ## Tech Stack
 
