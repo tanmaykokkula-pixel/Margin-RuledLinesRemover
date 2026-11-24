@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //Takes in user input for the name of the file and can correctly return width and height ========================================
         int width = 0;
         int height = 0;
         String picPath;
@@ -29,6 +30,14 @@ public class Main {
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
         }
+
+        int[][] rgbArray = new int[width][height];
+        for (int i = 0; i < rgbArray.length; i++) {
+            for (int k = 0; k < rgbArray[].legnth; k++) {
+                
+            }
+        }
+
 
     }
 }
