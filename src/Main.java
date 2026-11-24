@@ -10,6 +10,7 @@ public class Main {
         int width = 0;
         int height = 0;
         String picPath;
+        BufferedImage img = null;
 
         picPath = IO.readln("Enter the path of the image you want to edit:\n");
             while (picPath.length() == 0) {
@@ -17,9 +18,9 @@ public class Main {
             }
 
         try {
-            BufferedImage img = ImageIO.read(new File(picPath));
+            img = ImageIO.read(new File(picPath));
                 if (img == null) {
-                    IO.println("ERROR! - CANNOT READ SELECTED IMAGE");
+                    IO.println("\nERROR! - CANNOT READ SELECTED IMAGE");
                 }
             width = img.getWidth();
             height = img.getHeight();
@@ -32,11 +33,12 @@ public class Main {
         }
 
         int[][] rgbArray = new int[width][height];
-        for (int i = 0; i < rgbArray.length; i++) {
-            for (int k = 0; k < rgbArray[].legnth; k++) {
-                
+        for (int x = 0; x < rgbArray.length; x++) {
+            for (int y = 0; y < rgbArray[x].length; y++) {
+                rgbArray[x][y] = img.getRGB(x, y);
             }
         }
+
 
 
     }
