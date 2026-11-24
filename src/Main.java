@@ -1,13 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import  javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        int width = 0;
+        int height = 0;
+        String picPath;
+
+        picPath = IO.readln("Enter the path of the image you want to edit:\n");
+            while (picPath.length() == 0) {
+                picPath = IO.readln("ERROR! - PLEASE ENTER A PATH\nEnter the path of the image you want to edit:\n");
+            }
+
+        try {
+            BufferedImage img = ImageIO.read(new File(picPath));
+                if (img == null) {
+                    IO.println("ERROR! - CANNOT READ SELECTED IMAGE");
+                }
+            width = img.getWidth();
+            height = img.getHeight();
+            IO.println("The width is " + width +" and the height is " + height);
+        } catch (IOException e) {
+            IO.println("ERROR! - COULD NOT READ SELECTED IMAGE");
+            e.printStackTrace();
+        } catch (IllegalArgumentException iae) {
+            iae.printStackTrace();
+        }
+
     }
 }
